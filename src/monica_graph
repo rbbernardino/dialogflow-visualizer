@@ -1,0 +1,81 @@
+// Monica Agent
+digraph {
+	"61832e47-9909-43a4-9c38-8a5e90fac897" [label="Fallback Intent"]
+	"498bfd7e-1d4d-4127-9fa3-0028def8c5ae" [label="confirma.nome__SIM > check.condenado"]
+	"498bfd7e-1d4d-4127-9fa3-0028def8c5ae" -> "3dd99f2b-7cab-4c52-a97e-1915c501c771"
+	"498bfd7e-1d4d-4127-9fa3-0028def8c5ae" -> "e7981f45-bd7a-414d-bb4c-867ccc11d607"
+	"cb7a1629-aab7-48e1-af08-2fc26d33428b" [label="confirma.parcelar__NAO > confirma.servico"]
+	"cb7a1629-aab7-48e1-af08-2fc26d33428b" -> "a5ad0948-a2e2-4bab-a94c-63ed795479cf"
+	"cb7a1629-aab7-48e1-af08-2fc26d33428b" -> "6cd10adc-2b1a-471e-a4ee-17ea6c682ce4"
+	"67ad59d6-b2b9-4b53-96fe-fc5020911bad" [label="apresenta.pecunia__OK > confirma.pecunia"]
+	"67ad59d6-b2b9-4b53-96fe-fc5020911bad" -> "4f560b37-7733-469a-993a-e9e5faa3e42e"
+	"67ad59d6-b2b9-4b53-96fe-fc5020911bad" -> "5c0422de-0b9b-4dd0-aa86-ff40d607861b"
+	"cb3ca05e-e6a3-462e-b110-f09320b206ff" [label="05.confirma.confissao__OK > check.trabalha"]
+	"cb3ca05e-e6a3-462e-b110-f09320b206ff" -> "a8232853-d98d-4c9b-997d-04d35fdd9f4b"
+	"cb3ca05e-e6a3-462e-b110-f09320b206ff" -> "655b9cd2-2d37-40c6-ac1d-3f9194d12902"
+	"32d4bf0e-d844-4579-8488-b97ff5e6e771" [label="check.trab.conjuge__NAO > explica.ANPP"]
+	"32d4bf0e-d844-4579-8488-b97ff5e6e771" -> "34761734-7fbf-443c-a632-3b80ef52f49b"
+	"b5c81f74-0303-44e4-a597-23fa1bc69294" [label="04.check.resp.processo__NAO > confima.confissao"]
+	"b5c81f74-0303-44e4-a597-23fa1bc69294" -> "1010e950-ff42-4f83-b46e-3896593ffbdd"
+	"b5c81f74-0303-44e4-a597-23fa1bc69294" -> "cb3ca05e-e6a3-462e-b110-f09320b206ff"
+	"3dd99f2b-7cab-4c52-a97e-1915c501c771" [label="03.check.condenado__NAO > check.resp.processo"]
+	"3dd99f2b-7cab-4c52-a97e-1915c501c771" -> "eb07ab59-1140-46c6-9341-f7000e2b7495"
+	"3dd99f2b-7cab-4c52-a97e-1915c501c771" -> "b5c81f74-0303-44e4-a597-23fa1bc69294"
+	"3dd99f2b-7cab-4c52-a97e-1915c501c771" -> "eb07ab59-1140-46c6-9341-f7000e2b7495"
+	"609fc51f-1f3a-46ff-a958-7fec40404e15" [label="estudo.turno > check.casado"]
+	"609fc51f-1f3a-46ff-a958-7fec40404e15" -> "9434ff62-eb42-47cb-afa1-d7abcb4c49ab"
+	"609fc51f-1f3a-46ff-a958-7fec40404e15" -> "1b2d455b-7f27-4e11-8ae5-3b8bc7d28a19"
+	"8e5ac234-b8c9-4375-9fd6-1732f0943ea3" [label="confirma.parcelar__SIM > FIM"]
+	"2ba500f9-b935-4731-8b5e-542ab9f65253" [label="06a.check.estuda__NAO > check.casado"]
+	"2ba500f9-b935-4731-8b5e-542ab9f65253" -> "9434ff62-eb42-47cb-afa1-d7abcb4c49ab"
+	"2ba500f9-b935-4731-8b5e-542ab9f65253" -> "1b2d455b-7f27-4e11-8ae5-3b8bc7d28a19"
+	"e632179c-7814-421d-82a6-33a37cc2393a" [label="trabalho.renda > check.estuda"]
+	"e632179c-7814-421d-82a6-33a37cc2393a" -> "2ba500f9-b935-4731-8b5e-542ab9f65253"
+	"e632179c-7814-421d-82a6-33a37cc2393a" -> "acf78cc5-9a84-45d4-9f4b-9faed507bc33"
+	"9434ff62-eb42-47cb-afa1-d7abcb4c49ab" [label="07b__check.casado__NAO > explica.ANPP"]
+	"9434ff62-eb42-47cb-afa1-d7abcb4c49ab" -> "34761734-7fbf-443c-a632-3b80ef52f49b"
+	"eb07ab59-1140-46c6-9341-f7000e2b7495" [label="check.resp.processo__SIM > FIM"]
+	"ad11e1ec-843d-48d7-bc53-39dd4cc2469a" [label="01.cumprimento > get.NPU"]
+	"ad11e1ec-843d-48d7-bc53-39dd4cc2469a" -> "94fbd01c-9918-4161-819b-55d26094d407"
+	"34761734-7fbf-443c-a632-3b80ef52f49b" [label="08.explica.ANPP__OK > apresenta.pecunia"]
+	"34761734-7fbf-443c-a632-3b80ef52f49b" -> "67ad59d6-b2b9-4b53-96fe-fc5020911bad"
+	"55f22074-29e6-459f-9fa7-75a2ced9284e" [label="discorda.confissao__TOTAL > FIM"]
+	"4f560b37-7733-469a-993a-e9e5faa3e42e" [label="confirma.pecunia__NAO > confirma.parcelar"]
+	"4f560b37-7733-469a-993a-e9e5faa3e42e" -> "cb7a1629-aab7-48e1-af08-2fc26d33428b"
+	"4f560b37-7733-469a-993a-e9e5faa3e42e" -> "8e5ac234-b8c9-4375-9fd6-1732f0943ea3"
+	"f6979a2f-511d-426d-af3b-c246edad5dce" [label="check.trab.conjuge__SIM > conjuge.renda"]
+	"f6979a2f-511d-426d-af3b-c246edad5dce" -> "29bbdeea-9f67-41e7-9744-8bba257d2ef9"
+	"a8232853-d98d-4c9b-997d-04d35fdd9f4b" [label="check.trabalha__SIM > trabalho.detalhe"]
+	"a8232853-d98d-4c9b-997d-04d35fdd9f4b" -> "3da748c4-d7db-44bd-9b96-47b751508cd3"
+	"adb546ac-4d05-4859-8fb0-a9c8a03de719" [label="discorda.confissao__PARTES > versao.dos.fatos"]
+	"adb546ac-4d05-4859-8fb0-a9c8a03de719" -> "a6053e68-e8ae-46ad-811b-bd491608adf2"
+	"655b9cd2-2d37-40c6-ac1d-3f9194d12902" [label="check.trabalha__NAO > check.estuda"]
+	"655b9cd2-2d37-40c6-ac1d-3f9194d12902" -> "2ba500f9-b935-4731-8b5e-542ab9f65253"
+	"655b9cd2-2d37-40c6-ac1d-3f9194d12902" -> "acf78cc5-9a84-45d4-9f4b-9faed507bc33"
+	"ba73ef12-0407-4824-b3bf-915da7bedf18" [label="confirma.NPU__OK > confirma.nome"]
+	"ba73ef12-0407-4824-b3bf-915da7bedf18" -> "498bfd7e-1d4d-4127-9fa3-0028def8c5ae"
+	"a6053e68-e8ae-46ad-811b-bd491608adf2" [label="versao.dos.fatos > END"]
+	"a5ad0948-a2e2-4bab-a94c-63ed795479cf" [label="confirma.servico__NAO > FIM"]
+	"e7981f45-bd7a-414d-bb4c-867ccc11d607" [label="check.condenado__SIM > FIM"]
+	"72b41fca-12cb-4257-8236-7661e361e3c0" [label="confirma.NPU__NO > repete"]
+	"72b41fca-12cb-4257-8236-7661e361e3c0" -> "94fbd01c-9918-4161-819b-55d26094d407"
+	"3da748c4-d7db-44bd-9b96-47b751508cd3" [label="trabalho.detalhe > trabalho.renda"]
+	"3da748c4-d7db-44bd-9b96-47b751508cd3" -> "e632179c-7814-421d-82a6-33a37cc2393a"
+	"1b2d455b-7f27-4e11-8ae5-3b8bc7d28a19" [label="07a__check.casado_SIM > check.trab.conjuge"]
+	"1b2d455b-7f27-4e11-8ae5-3b8bc7d28a19" -> "32d4bf0e-d844-4579-8488-b97ff5e6e771"
+	"1b2d455b-7f27-4e11-8ae5-3b8bc7d28a19" -> "f6979a2f-511d-426d-af3b-c246edad5dce"
+	"1b2d455b-7f27-4e11-8ae5-3b8bc7d28a19" -> "32d4bf0e-d844-4579-8488-b97ff5e6e771"
+	"29bbdeea-9f67-41e7-9744-8bba257d2ef9" [label="conjuge.renda > explica.ANPP"]
+	"29bbdeea-9f67-41e7-9744-8bba257d2ef9" -> "34761734-7fbf-443c-a632-3b80ef52f49b"
+	"5c0422de-0b9b-4dd0-aa86-ff40d607861b" [label="confirma.pecunia__SIM > FIM"]
+	"1010e950-ff42-4f83-b46e-3896593ffbdd" [label="confima.confissao__NAO > discorda.confissao"]
+	"1010e950-ff42-4f83-b46e-3896593ffbdd" -> "55f22074-29e6-459f-9fa7-75a2ced9284e"
+	"1010e950-ff42-4f83-b46e-3896593ffbdd" -> "adb546ac-4d05-4859-8fb0-a9c8a03de719"
+	"acf78cc5-9a84-45d4-9f4b-9faed507bc33" [label="06b.check.estuda__SIM > estudo.turno"]
+	"acf78cc5-9a84-45d4-9f4b-9faed507bc33" -> "609fc51f-1f3a-46ff-a958-7fec40404e15"
+	"acf78cc5-9a84-45d4-9f4b-9faed507bc33" -> "609fc51f-1f3a-46ff-a958-7fec40404e15"
+	"94fbd01c-9918-4161-819b-55d26094d407" [label="02.get.NPU > confirma.NPU"]
+	"94fbd01c-9918-4161-819b-55d26094d407" -> "ba73ef12-0407-4824-b3bf-915da7bedf18"
+	"94fbd01c-9918-4161-819b-55d26094d407" -> "72b41fca-12cb-4257-8236-7661e361e3c0"
+	"6cd10adc-2b1a-471e-a4ee-17ea6c682ce4" [label="confirma.servico__SIM > FIM"]
+}
